@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A & C Serviços e Consultoria Contábeis LTDA — soluções contábeis, fiscais, trabalhistas e empresariais em Nova Lima/MG.">
+  <meta name="theme-color" content="#0b1f33">
+  <title>A & C Serviços e Consultoria Contábeis | Nova Lima - MG</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --navy:#0b1f33; --navy2:#123653; --gold:#d8a84e; --cream:#f6f4ef;
+      --ink:#18212b; --muted:#687482; --line:#e5e8eb; --white:#fff;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:"DM Sans",sans-serif;color:var(--ink);background:#fff}
+    h1,h2,h3,h4,h5,.navbar-brand{font-family:"Manrope",sans-serif}
+    .navbar{background:rgba(11,31,51,.94)!important;backdrop-filter:blur(14px)}
+    .navbar-brand span{color:var(--gold)}
+    .nav-link{color:#e9eff5!important;font-weight:600}
+    .nav-link:hover{color:var(--gold)!important}
+    .hero{min-height:92vh;background:
+      linear-gradient(105deg,rgba(11,31,51,.98) 0%,rgba(11,31,51,.88) 46%,rgba(11,31,51,.28) 100%),
+      url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2000&q=85") center/cover;
+      display:flex;align-items:center;color:#fff;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(216,168,78,.28);border-radius:50%;right:-180px;top:-120px}
+    .eyebrow{letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-size:.78rem;font-weight:800}
+    .hero h1{font-size:clamp(2.5rem,5vw,5.3rem);line-height:1.02;font-weight:800;max-width:850px}
+    .hero p{font-size:1.12rem;max-width:690px;color:#dbe4ec}
+    .btn-gold{background:var(--gold);border-color:var(--gold);color:var(--navy);font-weight:800;padding:.9rem 1.3rem}
+    .btn-gold:hover{background:#e6ba65;border-color:#e6ba65;color:var(--navy)}
+    .btn-outline-light{font-weight:700;padding:.9rem 1.3rem}
+    .statbar{margin-top:-50px;position:relative;z-index:3}
+    .stat-card{background:#fff;border-radius:18px;padding:1.4rem;box-shadow:0 18px 50px rgba(11,31,51,.12);height:100%}
+    .stat-card strong{font:800 1.8rem "Manrope";color:var(--navy)}
+    section{padding:100px 0}
+    .section-kicker{color:var(--gold);font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;font-weight:800}
+    .section-title{font-size:clamp(2rem,4vw,3.3rem);font-weight:800;color:var(--navy)}
+    .soft{background:var(--cream)}
+    .service{border:1px solid var(--line);border-radius:20px;padding:28px;background:#fff;height:100%;transition:.35s;position:relative;overflow:hidden}
+    .service:before{content:"";position:absolute;left:0;top:0;width:4px;height:0;background:var(--gold);transition:.35s}
+    .service:hover{transform:translateY(-8px);box-shadow:0 20px 45px rgba(11,31,51,.1)}
+    .service:hover:before{height:100%}
+    .icon{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;background:#edf3f7;color:var(--navy);font-size:1.5rem;margin-bottom:22px}
+    .service h3{font-size:1.15rem;font-weight:800}
+    .service p{color:var(--muted);line-height:1.7}
+    .about-img{border-radius:28px;width:100%;height:560px;object-fit:cover;box-shadow:0 25px 60px rgba(11,31,51,.15)}
+    .quote{background:var(--navy);color:#fff;border-radius:30px;padding:55px;position:relative;overflow:hidden}
+    .quote:after{content:"“";position:absolute;right:30px;top:-70px;font:900 280px Georgia;color:rgba(216,168,78,.12)}
+    .quote p{font:600 clamp(1.5rem,3vw,2.5rem) "Manrope";max-width:850px;position:relative;z-index:1}
+    .contact-card{border-radius:24px;background:var(--navy);color:#fff;padding:35px;height:100%}
+    .contact-item{display:flex;gap:15px;margin:20px 0}
+    .contact-item i{color:var(--gold);font-size:1.3rem}
+    footer{background:#071522;color:#aebdca;padding:45px 0 25px}
+    footer a{color:#dce5eb;text-decoration:none}
+    .floating{position:fixed;right:22px;bottom:22px;z-index:20;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;font-size:1.55rem;box-shadow:0 12px 30px rgba(0,0,0,.2)}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+    .reveal.visible{opacity:1;transform:none}
+    .delay-1{transition-delay:.1s}.delay-2{transition-delay:.2s}.delay-3{transition-delay:.3s}
+    .privacy{font-size:.92rem;line-height:1.7;color:var(--muted)}
+    .badge-soft{background:#edf3f7;color:var(--navy);border-radius:30px;padding:.5rem .8rem;font-weight:700}
+    @media(max-width:991px){.hero{min-height:80vh}.statbar{margin-top:25px}section{padding:75px 0}.about-img{height:400px}}
+  </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container py-2">
+    <a class="navbar-brand fw-bold fs-5" href="#inicio">A & C <span>Contábeis</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#sobre">Empresa</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicos">Atividades</a></li>
+        <li class="nav-item"><a class="nav-link" href="#diferenciais">Diferenciais</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        <li class="nav-item ms-lg-2"><a class="btn btn-gold rounded-pill px-4" href="#contato">Fale conosco</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="inicio" class="hero">
+  <div class="container position-relative z-2">
+    <div class="eyebrow mb-3">Contabilidade estratégica • Nova Lima / MG</div>
+    <h1 class="mb-4">Contabilidade que transforma números em decisões.</h1>
+    <p class="mb-4">Há mais de duas décadas, a A & C Serviços e Consultoria Contábeis apoia empresas e empreendedores com organização, segurança fiscal e visão para crescer.</p>
+    <div class="d-flex flex-wrap gap-3">
+      <a href="#servicos" class="btn btn-gold rounded-pill">Conheça nossas atividades <i class="bi bi-arrow-right ms-2"></i></a>
+      <a href="#contato" class="btn btn-outline-light rounded-pill">Solicitar atendimento</a>
+    </div>
+  </div>
+</header>
+
+<div class="container statbar">
+  <div class="row g-3">
+    <div class="col-md-4 reveal"><div class="stat-card"><span class="eyebrow">Experiência</span><br><strong>25+ anos</strong><div class="text-secondary">de atuação empresarial</div></div></div>
+    <div class="col-md-4 reveal delay-1"><div class="stat-card"><span class="eyebrow">Registro</span><br><strong>CRC-MG</strong><div class="text-secondary">MG-011045/O</div></div></div>
+    <div class="col-md-4 reveal delay-2"><div class="stat-card"><span class="eyebrow">Atendimento</span><br><strong>Próximo</strong><div class="text-secondary">consultivo e personalizado</div></div></div>
+  </div>
+</div>
+
+<section id="sobre">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 reveal">
+        <img class="about-img" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=85" alt="Profissionais em reunião empresarial" loading="lazy">
+      </div>
+      <div class="col-lg-6 reveal delay-1">
+        <div class="section-kicker mb-3">Quem somos</div>
+        <h2 class="section-title mb-4">Uma parceria contábil para cada fase do seu negócio.</h2>
+        <p class="lead text-secondary">A A & C Serviços e Consultoria Contábeis LTDA atua com foco em empresas que precisam de clareza, conformidade e suporte para tomar decisões com mais confiança.</p>
+        <p class="text-secondary">Nosso trabalho reúne rotinas contábeis, fiscais e trabalhistas, planejamento, orientação empresarial e acompanhamento das obrigações. Mais do que processar informações, buscamos compreender o cenário de cada cliente e entregar uma contabilidade útil para a gestão.</p>
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <span class="badge-soft">Ativa desde 2001</span><span class="badge-soft">Simples Nacional</span><span class="badge-soft">Microempresa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="soft">
+  <div class="container">
+    <div class="row mb-5 align-items-end">
+      <div class="col-lg-8 reveal"><div class="section-kicker mb-3">O que fazemos</div><h2 class="section-title mb-0">Atividades e soluções contábeis</h2></div>
+      <div class="col-lg-4 reveal delay-1"><p class="text-secondary mb-0">Uma estrutura completa para manter sua empresa organizada, regular e preparada para evoluir.</p></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 reveal"><div class="service"><div class="icon"><i class="bi bi-calculator"></i></div><h3>Contabilidade</h3><p>Escrituração, demonstrações, balancetes, relatórios e acompanhamento das informações contábeis para apoiar a gestão.</p></div></div>
+      <div class="col-md-6 col-lg-4 reveal delay-1"><div class="service"><div class="icon"><i class="bi bi-receipt"></i></div><h3>Fiscal e tributário</h3><p>Apuração de tributos, obrigações acessórias e orientação para uma rotina fiscal mais segura e organizada.</p></div></div>
+      <div class="col-md-6 col-lg-4 reveal delay-2"><div class="service"><div class="icon"><i class="bi bi-people"></i></div><h3>Departamento pessoal</h3><p>Suporte às rotinas trabalhistas, folha, admissões, rescisões, férias e demais obrigações relacionadas.</p></div></div>
+      <div class="col-md-6 col-lg-4 reveal"><div class="service"><div class="icon"><i class="bi bi-building"></i></div><h3>Abertura e regularização</h3><p>Orientação para abertura, alterações cadastrais, enquadramentos e organização documental da empresa.</p></div></div>
+      <div class="col-md-6 col-lg-4 reveal delay-1"><div class="service"><div class="icon"><i class="bi bi-graph-up-arrow"></i></div><h3>Consultoria empresarial</h3><p>Informações contábeis transformadas em visão gerencial para acompanhar resultados e planejar próximos passos.</p></div></div>
+      <div class="col-md-6 col-lg-4 reveal delay-2"><div class="service"><div class="icon"><i class="bi bi-shield-check"></i></div><h3>Conformidade</h3><p>Acompanhamento das obrigações e cuidados necessários para reduzir riscos e manter a empresa em dia.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="diferenciais">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5 reveal"><div class="section-kicker mb-3">Nosso jeito de trabalhar</div><h2 class="section-title">Precisão nos detalhes. Visão no todo.</h2></div>
+      <div class="col-lg-7">
+        <div class="row g-4">
+          <div class="col-md-6 reveal"><h4><i class="bi bi-check2-circle text-warning me-2"></i>Proximidade</h4><p class="text-secondary">Atendimento pensado para entender as particularidades de cada negócio.</p></div>
+          <div class="col-md-6 reveal delay-1"><h4><i class="bi bi-check2-circle text-warning me-2"></i>Organização</h4><p class="text-secondary">Processos claros para facilitar a rotina e o acompanhamento das obrigações.</p></div>
+          <div class="col-md-6 reveal"><h4><i class="bi bi-check2-circle text-warning me-2"></i>Confiança</h4><p class="text-secondary">Responsabilidade e cuidado com informações importantes para sua empresa.</p></div>
+          <div class="col-md-6 reveal delay-1"><h4><i class="bi bi-check2-circle text-warning me-2"></i>Visão empresarial</h4><p class="text-secondary">Contabilidade como ferramenta para compreender resultados e apoiar decisões.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="container">
+    <div class="quote reveal">
+      <div class="eyebrow mb-3">Uma frase para levar com você</div>
+      <p>“Quando os números estão organizados, as decisões ficam mais claras e o caminho para crescer fica mais seguro.”</p>
+      <div class="text-white-50">A & C Serviços e Consultoria Contábeis</div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6 reveal">
+        <div class="contact-card">
+          <div class="section-kicker mb-3">Vamos conversar</div>
+          <h2 class="text-white mb-4">Conte com uma contabilidade preparada para estar ao seu lado.</h2>
+          <div class="contact-item"><i class="bi bi-geo-alt"></i><div><strong>Endereço</strong><br>Rua Bungavilles, 878 — Morro do Chapeu<br>Nova Lima — MG • CEP 34000-001</div></div>
+          <div class="contact-item"><i class="bi bi-building"></i><div><strong>CNPJ</strong><br>04.642.048/0001-54</div></div>
+          <div class="contact-item"><i class="bi bi-award"></i><div><strong>CRC</strong><br>MG-011045/O</div></div>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal delay-1">
+        <div class="p-4 p-lg-5 border rounded-4 h-100">
+          <h3 class="mb-3">Atendimento</h3>
+          <p class="text-secondary">Entre em contato para apresentar sua necessidade e conhecer a melhor forma de atendimento.</p>
+          <!-- Substitua o número abaixo pelo WhatsApp oficial da empresa antes de publicar. -->
+          <a href="https://wa.me/" class="btn btn-gold rounded-pill mb-3" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>Falar pelo WhatsApp</a>
+          <p class="small text-secondary mb-0">O link do WhatsApp está propositalmente sem número: insira o telefone oficial da empresa antes de publicar.</p>
+          <hr class="my-4">
+          <p class="small text-secondary mb-0"><strong>Razão Social:</strong> A & C Servicos e Consultoria Contabeis LTDA<br><strong>Natureza:</strong> Sociedade Empresária Limitada<br><strong>Capital Social:</strong> R$ 58.000,00<br><strong>Situação cadastral:</strong> Ativa</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="privacidade" class="soft">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 reveal">
+        <div class="section-kicker mb-3">Transparência</div>
+        <h2 class="section-title mb-4">Política de Privacidade</h2>
+        <div class="privacy">
+          <p><strong>1. Compromisso.</strong> A A & C Serviços e Consultoria Contábeis LTDA valoriza a privacidade e procura tratar dados pessoais de forma responsável, transparente e compatível com a legislação aplicável, especialmente a Lei Geral de Proteção de Dados Pessoais (LGPD).</p>
+          <p><strong>2. Dados coletados.</strong> Este site, em sua versão estática, não possui cadastro de usuários nem formulário próprio de coleta. Caso você entre em contato por canais externos, como WhatsApp ou e-mail, os dados fornecidos poderão ser utilizados para responder à solicitação e prestar o atendimento solicitado.</p>
+          <p><strong>3. Finalidade.</strong> Os dados recebidos poderão ser utilizados para comunicação, atendimento, execução de serviços solicitados, cumprimento de obrigações legais e exercício regular de direitos, quando aplicável.</p>
+          <p><strong>4. Compartilhamento e segurança.</strong> Não comercializamos dados pessoais. Eventuais compartilhamentos ocorrerão quando necessários à prestação do serviço, ao cumprimento de obrigação legal ou mediante outra base legal aplicável. Adotamos medidas razoáveis para proteger as informações sob nossa responsabilidade.</p>
+          <p><strong>5. Direitos do titular.</strong> Nos limites previstos pela LGPD, o titular pode solicitar informações sobre o tratamento de seus dados e exercer os direitos previstos em lei. Solicitações podem ser encaminhadas pelos canais oficiais de atendimento da empresa.</p>
+          <p><strong>6. Cookies e terceiros.</strong> O site utiliza recursos externos de CDN e fontes, como Bootstrap, Bootstrap Icons e Google Fonts. Esses serviços podem realizar requisições técnicas aos respectivos servidores. Antes da publicação definitiva, recomenda-se revisar a configuração de cookies, analytics, formulários e demais integrações eventualmente adicionadas ao site.</p>
+          <p><strong>7. Atualizações.</strong> Esta política poderá ser atualizada para refletir mudanças legais, técnicas ou operacionais. Recomenda-se consultar esta página periodicamente.</p>
+          <p class="mb-0"><strong>Observação:</strong> este texto é um modelo informativo e deve ser revisado conforme os canais efetivamente utilizados pela empresa e sua operação de tratamento de dados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-7"><h4 class="text-white">A & C <span style="color:var(--gold)">Contábeis</span></h4><p class="mb-0">Serviços e Consultoria Contábeis LTDA · CNPJ 04.642.048/0001-54</p></div>
+      <div class="col-lg-5 text-lg-end"><a href="#privacidade" class="me-3">Política de Privacidade</a><a href="#inicio">Voltar ao topo ↑</a></div>
+    </div>
+    <hr class="border-secondary my-4">
+    <div class="small">© <span id="year"></span> A & C Serviços e Consultoria Contábeis LTDA. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<a class="floating" href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
